@@ -9,8 +9,13 @@
 
 ~~~
 
+## modify mxse7w.py
 ~~~
 cd /data/homeassistant202405
 
 docker cp  ha:/usr/local/lib/python3.14/site-packages/deebot_client/hardware/mxse7w.py .
+
+docker cp mxse7w.py ha:/usr/local/lib/python3.14/site-packages/deebot_client/hardware/
+
+docker restart ha
 ~~~
