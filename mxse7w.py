@@ -255,7 +255,13 @@ def get_device_info() -> StaticDeviceInfo:
             state=CapabilityEvent(StateEvent, [GetChargeState(), GetWorkState()]),
             station=CapabilityStation(
                 action=CapabilityExecuteTypes(
-                    station_action.StationAction, types=(StationAction.EMPTY_DUSTBIN,StationAction.DRY_MOP,)  # add Dry mop
+                    station_action.StationAction, 
+                    types=(
+                           StationAction.EMPTY_DUSTBIN,
+                           StationAction.DRY_MOP,
+                           StationAction.WASH_MOP,
+                           StationAction.CLEAN_BASE,
+                     ) # add StationAction.WASH_MOP, 20260715
                 ),
                 auto_empty=CapabilitySetTypes(
                     event=AutoEmptyEvent,
