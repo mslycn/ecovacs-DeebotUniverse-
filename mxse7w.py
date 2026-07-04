@@ -124,6 +124,7 @@ from deebot_client.events.efficiency_mode import EfficiencyMode
 from deebot_client.models import StaticDeviceInfo
 
 
+
 def get_device_info() -> StaticDeviceInfo:
     """Get device info for this model."""
     return StaticDeviceInfo(
@@ -254,7 +255,7 @@ def get_device_info() -> StaticDeviceInfo:
             state=CapabilityEvent(StateEvent, [GetChargeState(), GetWorkState()]),
             station=CapabilityStation(
                 action=CapabilityExecuteTypes(
-                    station_action.StationAction, types=(StationAction.EMPTY_DUSTBIN,)
+                    station_action.StationAction, types=(StationAction.EMPTY_DUSTBIN,StationAction.DRY_MOP,)  # add Dry mop
                 ),
                 auto_empty=CapabilitySetTypes(
                     event=AutoEmptyEvent,
@@ -265,6 +266,8 @@ def get_device_info() -> StaticDeviceInfo:
                         auto_empty.Frequency.SMART,
                     ),
                 ),
+
+
                 state=CapabilityEvent(StationEvent, [GetWorkState()]),
             ),
             stats=CapabilityStats(
