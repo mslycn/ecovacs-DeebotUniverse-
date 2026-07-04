@@ -8,3 +8,9 @@
 
 
 ~~~
+
+~~~
+cd /data/homeassistant202405
+
+docker cp  ha:/usr/local/lib/python3.14/site-packages/deebot_client/hardware/mxse7w.py .
+~~~
