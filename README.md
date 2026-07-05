@@ -1,5 +1,33 @@
 # ecovacs-DeebotUniverse
 
+## ha System information
+
+~~~
+Version	core-2026.6.4
+Installation type	Home Assistant Container
+Development	false
+Supervisor	false
+Docker	true
+Container architecture	aarch64
+User	root
+Virtual environment	false
+Python version	3.14.5
+Operating system family	Linux
+Operating system version	6.12.75+rpt-rpi-2712
+CPU architecture	aarch64
+Timezone	Asia/Shanghai
+Configuration directory	/config
+~~~
+
+## deebot inforation
+
+~~~
+DEEBOT X5 PRO
+Model: MXSE7W
+Region: China
+
+~~~
+
 
 ~~~
  docker exec -it ha  sh
